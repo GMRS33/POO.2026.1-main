@@ -24,4 +24,15 @@ public class ItemCardapioRepository {
     public void remover(ItemCardapio item) {
         itens.remove(item);
     }
+    
+    public ItemCardapio buscarPorNome(String nome) {
+
+        for (ItemCardapio item : itens) {
+            if (item.getNome().equals(nome)) {
+                return item;
+            }
+        }
+
+        return null;
+    }
 }

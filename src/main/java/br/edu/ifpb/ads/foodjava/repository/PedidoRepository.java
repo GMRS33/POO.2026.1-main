@@ -24,4 +24,15 @@ public class PedidoRepository {
     public void remover(Pedido pedido) {
         pedidos.remove(pedido);
     }
+    
+    public Pedido buscarPorId(String id) {
+
+        for (Pedido pedido : pedidos) {
+            if (pedido.getId().equals(id)) {
+                return pedido;
+            }
+        }
+
+        return null;
+    }
 }

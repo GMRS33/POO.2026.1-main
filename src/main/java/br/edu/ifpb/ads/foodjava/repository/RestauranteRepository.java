@@ -24,4 +24,15 @@ public class RestauranteRepository {
     public void remover(Restaurante restaurante) {
         restaurantes.remove(restaurante);
     }
+    
+    public Restaurante buscarPorEmail(String email) {
+
+        for (Restaurante restaurante : restaurantes) {
+            if (restaurante.getEmail().equals(email)) {
+                return restaurante;
+            }
+        }
+
+        return null;
+    }
 }
