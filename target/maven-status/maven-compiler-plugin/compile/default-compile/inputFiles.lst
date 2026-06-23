@@ -1,3 +1,7 @@
+C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\controller\ClienteController.java
+C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\controller\ItemCardapioController.java
+C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\controller\PedidoController.java
+C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\controller\RestauranteController.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\exception\ArquivoImportacaoException.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\exception\CancelamentoNaoPermitidoException.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\exception\DocumentoInvalidoException.java
@@ -16,3 +20,11 @@ C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\m
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\model\Restaurante.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\model\StatusPedido.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\model\Usuario.java
+C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\repository\ClienteRepository.java
+C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\repository\ItemCardapioRepository.java
+C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\repository\PedidoRepository.java
+C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\repository\RestauranteRepository.java
+C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\service\ClienteService.java
+C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\service\ItemCardapioService.java
+C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\service\PedidoService.java
+C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\service\RestauranteService.java
