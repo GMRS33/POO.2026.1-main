@@ -1,5 +1,4 @@
 br\edu\ifpb\ads\foodjava\repository\RestauranteRepository.class
-br\edu\ifpb\ads\foodjava\controller\RestauranteController.class
 br\edu\ifpb\ads\foodjava\exception\StatusInvalidoException.class
 br\edu\ifpb\ads\foodjava\model\ItemPedido.class
 br\edu\ifpb\ads\foodjava\model\Usuario.class
@@ -8,7 +7,6 @@ br\edu\ifpb\ads\foodjava\MainApp.class
 br\edu\ifpb\ads\foodjava\controller\PedidoController.class
 br\edu\ifpb\ads\foodjava\repository\PedidoRepository.class
 br\edu\ifpb\ads\foodjava\model\Restaurante.class
-br\edu\ifpb\ads\foodjava\service\RestauranteService.class
 br\edu\ifpb\ads\foodjava\exception\PrecoInvalidoException.class
 br\edu\ifpb\ads\foodjava\model\Categoria.class
 br\edu\ifpb\ads\foodjava\model\Gerente.class

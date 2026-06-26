@@ -1,38 +1,33 @@
 package br.edu.ifpb.ads.foodjava.repository;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import br.edu.ifpb.ads.foodjava.model.Restaurante;
+import br.edu.ifpb.ads.foodjava.util.Caminhos;
+import br.edu.ifpb.ads.foodjava.util.JsonUtil;
 
 public class RestauranteRepository {
 
-    private List<Restaurante> restaurantes;
-
-    public RestauranteRepository() {
-        restaurantes = new ArrayList<>();
-    }
-
     public void salvar(Restaurante restaurante) {
-        restaurantes.add(restaurante);
+
+        JsonUtil.salvar(Caminhos.RESTAURANTE, restaurante);
+
     }
 
-    public List<Restaurante> listar() {
-        return restaurantes;
+    public Restaurante buscar() {
+
+        return JsonUtil.carregar(Caminhos.RESTAURANTE, Restaurante.class);
+
     }
 
-    public void remover(Restaurante restaurante) {
-        restaurantes.remove(restaurante);
-    }
-    
-    public Restaurante buscarPorEmail(String email) {
+    public void atualizar(Restaurante restaurante) {
 
-        for (Restaurante restaurante : restaurantes) {
-            if (restaurante.getEmail().equals(email)) {
-                return restaurante;
-            }
-        }
+        JsonUtil.salvar(Caminhos.RESTAURANTE, restaurante);
 
-        return null;
     }
+
+    public boolean existeRestaurante() {
+
+        return buscar() != null;
+
+    }
+
 }

@@ -1,8 +1,5 @@
 package br.edu.ifpb.ads.foodjava.service;
 
-import java.util.List;
-
-import br.edu.ifpb.ads.foodjava.exception.UsuarioDuplicadoException;
 import br.edu.ifpb.ads.foodjava.model.Restaurante;
 import br.edu.ifpb.ads.foodjava.repository.RestauranteRepository;
 
@@ -14,24 +11,24 @@ public class RestauranteService {
         repository = new RestauranteRepository();
     }
 
-    public void cadastrarRestaurante(Restaurante restaurante) throws UsuarioDuplicadoException {
+    public void configurarRestaurante(Restaurante restaurante) {
 
-        if (repository.buscarPorEmail(restaurante.getEmail()) != null) {
-            throw new UsuarioDuplicadoException();
+        if (!repository.existeRestaurante()) {
+            repository.salvar(restaurante);
         }
 
-        repository.salvar(restaurante);
     }
 
-    public List<Restaurante> listarRestaurantes() {
-        return repository.listar();
+    public Restaurante buscarRestaurante() {
+        return repository.buscar();
     }
 
-    public Restaurante buscarRestaurante(String email) {
-        return repository.buscarPorEmail(email);
+    public void atualizarRestaurante(Restaurante restaurante) {
+        repository.atualizar(restaurante);
     }
 
-    public void removerRestaurante(Restaurante restaurante) {
-        repository.remover(restaurante);
+    public boolean restauranteConfigurado() {
+        return repository.existeRestaurante();
     }
+
 }
