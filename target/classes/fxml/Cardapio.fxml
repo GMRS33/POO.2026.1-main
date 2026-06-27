@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="550"
+            prefWidth="850"
+            xmlns="http://javafx.com/javafx/26"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.edu.ifpb.ads.foodjava.controller.CardapioController">
+
+    <children>
+
+        <Label layoutX="320"
+               layoutY="20"
+               text="Cardápio"
+               style="-fx-font-size:22px;-fx-font-weight:bold;"/>
+
+        <TableView fx:id="tableItens"
+                   layoutX="30"
+                   layoutY="70"
+                   prefWidth="790"
+                   prefHeight="360">
+
+            <columns>
+
+                <TableColumn fx:id="colNome"
+                             text="Nome"
+                             prefWidth="180"/>
+
+                <TableColumn fx:id="colCategoria"
+                             text="Categoria"
+                             prefWidth="160"/>
+
+                <TableColumn fx:id="colPreco"
+                             text="Preço"
+                             prefWidth="120"/>
+
+                <TableColumn fx:id="colDisponivel"
+                             text="Disponível"
+                             prefWidth="120"/>
+
+            </columns>
+
+        </TableView>
+
+        <Button text="Editar"
+        		layoutX="120"
+        		layoutY="460"
+        		onAction="#editar"/>
+        		
+        <Button text="Excluir"
+        		layoutX="250"
+        		layoutY="460"
+        		onAction="#excluir"/>
+
+        <Button text="Atualizar"
+                layoutX="310"
+                layoutY="460"
+                onAction="#atualizar"/>
+
+        <Button text="Voltar"
+                layoutX="470"
+                layoutY="460"
+                onAction="#voltar"/>
+
+    </children>
+
+</AnchorPane>

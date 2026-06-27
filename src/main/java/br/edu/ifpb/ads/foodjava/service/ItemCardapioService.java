@@ -25,7 +25,12 @@ public class ItemCardapioService {
         return repository.buscarPorNome(nome);
     }
 
+    public void atualizarItem(ItemCardapio item) {
+        repository.atualizar(item);
+    }
+
     public void removerItem(ItemCardapio item) {
         repository.remover(item);
     }
+
 }

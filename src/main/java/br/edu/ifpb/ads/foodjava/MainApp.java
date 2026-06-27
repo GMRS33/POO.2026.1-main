@@ -1,25 +1,34 @@
 package br.edu.ifpb.ads.foodjava;
 
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
-import javafx.stage.Stage;
+import br.edu.ifpb.ads.foodjava.service.GerenteService;
+import br.edu.ifpb.ads.foodjava.service.RestauranteService;
 import br.edu.ifpb.ads.foodjava.util.TrocarTela;
+import javafx.application.Application;
+import javafx.stage.Stage;
+
 public class MainApp extends Application {
 
-	@Override
-	public void start(Stage stage) {
+    @Override
+    public void start(Stage stage) {
 
-	    TrocarTela.abrir(stage, "ConfiguracaoInicial.fxml");
+        GerenteService gerenteService = new GerenteService();
+        RestauranteService restauranteService = new RestauranteService();
 
-	    stage.setTitle("FoodJava");
+        if (!gerenteService.gerenteExiste()
+                || !restauranteService.restauranteExiste()) {
 
-	}
-	
+            TrocarTela.abrir(stage, "ConfiguracaoInicial.fxml");
+
+        } else {
+
+            TrocarTela.abrir(stage, "Login.fxml");
+
+        }
+
+    }
 
     public static void main(String[] args) {
         launch(args);
     }
+
 }

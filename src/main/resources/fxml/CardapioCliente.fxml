@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600"
+            prefWidth="850"
+            xmlns="http://javafx.com/javafx/26"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.edu.ifpb.ads.foodjava.controller.CardapioClienteController">
+
+    <children>
+
+        <Label layoutX="300"
+               layoutY="20"
+               text="Cardápio"
+               style="-fx-font-size:22px;-fx-font-weight:bold;"/>
+
+        <TableView fx:id="tableItens"
+                   layoutX="25"
+                   layoutY="70"
+                   prefHeight="400"
+                   prefWidth="800">
+
+            <columns>
+
+                <TableColumn fx:id="colNome"
+                             text="Nome"
+                             prefWidth="170"/>
+
+                <TableColumn fx:id="colDescricao"
+                             text="Descrição"
+                             prefWidth="250"/>
+
+                <TableColumn fx:id="colCategoria"
+                             text="Categoria"
+                             prefWidth="140"/>
+
+                <TableColumn fx:id="colPreco"
+                             text="Preço"
+                             prefWidth="100"/>
+
+                <TableColumn fx:id="colDisponivel"
+                             text="Disponível"
+                             prefWidth="100"/>
+
+            </columns>
+
+        </TableView>
+
+        <Button text="Adicionar ao Carrinho"
+                layoutX="180"
+                layoutY="510"
+                prefWidth="180"
+                onAction="#adicionarCarrinho"/>
+
+        <Button text="Voltar"
+                layoutX="450"
+                layoutY="510"
+                prefWidth="120"
+                onAction="#voltar"/>
+
+    </children>
+
+</AnchorPane>

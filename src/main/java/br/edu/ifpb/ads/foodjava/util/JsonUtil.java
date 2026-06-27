@@ -15,11 +15,24 @@ public class JsonUtil {
 
     public static <T> void salvar(String caminho, T objeto) {
 
-        try (FileWriter writer = new FileWriter(caminho)) {
+        try {
+
+            java.io.File arquivo = new java.io.File(caminho);
+
+            System.out.println("Caminho absoluto:");
+            System.out.println(arquivo.getAbsolutePath());
+
+            arquivo.getParentFile().mkdirs();
+
+            FileWriter writer = new FileWriter(arquivo);
 
             gson.toJson(objeto, writer);
 
-        } catch (IOException e) {
+            writer.close();
+
+            System.out.println("Arquivo salvo com sucesso!");
+
+        } catch (Exception e) {
 
             e.printStackTrace();
 

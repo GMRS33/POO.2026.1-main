@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="550"
+            prefWidth="700"
+            xmlns="http://javafx.com/javafx/26"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.edu.ifpb.ads.foodjava.controller.EditarItemCardapioController"
+
+    <children>
+
+        <Label layoutX="230"
+               layoutY="20"
+               text="Editar Item"
+               style="-fx-font-size:22px;-fx-font-weight:bold;"/>
+
+        <Label layoutX="70" layoutY="80" text="Nome"/>
+        <TextField fx:id="txtNome"
+                   layoutX="200"
+                   layoutY="75"
+                   prefWidth="300"/>
+
+        <Label layoutX="70" layoutY="125" text="Descrição"/>
+        <TextArea fx:id="txtDescricao"
+                  layoutX="200"
+                  layoutY="120"
+                  prefWidth="300"
+                  prefHeight="80"/>
+
+        <Label layoutX="70" layoutY="220" text="Preço"/>
+        <TextField fx:id="txtPreco"
+                   layoutX="200"
+                   layoutY="215"/>
+
+        <Label layoutX="70" layoutY="270" text="Categoria"/>
+        <ComboBox fx:id="cbCategoria"
+                  layoutX="200"
+                  layoutY="265"
+                  prefWidth="220"/>
+
+        <CheckBox fx:id="ckDisponivel"
+                  layoutX="200"
+                  layoutY="320"
+                  text="Disponível"/>
+
+        <Label layoutX="70" layoutY="370" text="Imagem"/>
+        <TextField fx:id="txtImagem"
+                   layoutX="200"
+                   layoutY="365"
+                   prefWidth="300"/>
+
+        <Button text="Salvar"
+                layoutX="200"
+                layoutY="450"
+                onAction="#salvar"/>
+
+        <Button text="Voltar"
+                layoutX="320"
+                layoutY="450"
+                onAction="#voltar"/>
+
+    </children>
+
+</AnchorPane>

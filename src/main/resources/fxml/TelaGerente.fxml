@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0"
+            prefWidth="700.0"
+            xmlns="http://javafx.com/javafx/26"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.edu.ifpb.ads.foodjava.controller.TelaGerenteController">
+
+    <children>
+
+        <Label layoutX="250"
+               layoutY="30"
+               text="Painel do Gerente"
+               style="-fx-font-size:24px;-fx-font-weight:bold;"/>
+
+        <Button fx:id="btnCadastrarItem"
+                layoutX="220"
+                layoutY="110"
+                prefWidth="250"
+                prefHeight="40"
+                text="Cadastrar Item"
+                onAction="#abrirCadastroItem"/>
+
+        <Button fx:id="btnCardapio"
+                layoutX="220"
+                layoutY="170"
+                prefWidth="250"
+                prefHeight="40"
+                text="Visualizar Cardápio"
+                onAction="#abrirCardapio"/>
+
+        <Button fx:id="btnRestaurante"
+                layoutX="220"
+                layoutY="230"
+                prefWidth="250"
+                prefHeight="40"
+                text="Editar Restaurante"
+                onAction="#editarRestaurante"/>
+
+        <Button fx:id="btnPedidos"
+                layoutX="220"
+                layoutY="290"
+                prefWidth="250"
+                prefHeight="40"
+                text="Pedidos"
+                onAction="#abrirPedidos"/>
+
+        <Button fx:id="btnSair"
+                layoutX="220"
+                layoutY="390"
+                prefWidth="250"
+                prefHeight="40"
+                text="Sair"
+                onAction="#sair"/>
+
+    </children>
+
+</AnchorPane>

@@ -1,64 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="550.0" prefWidth="750.0"
-            xmlns="http://javafx.com/javafx/26"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="br.edu.ifpb.ads.foodjava.controller.ConfiguracaoInicialController">
+<AnchorPane prefHeight="550.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifpb.ads.foodjava.controller.ConfiguracaoInicialController">
 
     <children>
 
-        <Label layoutX="240" layoutY="20"
-               text="Configuração Inicial do Restaurante"
-               style="-fx-font-size:22px; -fx-font-weight:bold;" />
+        <Label layoutX="187.0" layoutY="14.0" style="-fx-font-size:22px; -fx-font-weight:bold;" text="Configuração Inicial do Restaurante" />
 
-        <Label layoutX="70" layoutY="90" text="Nome Fantasia"/>
-        <TextField fx:id="txtNomeFantasia"
-                   layoutX="220" layoutY="85"
-                   prefWidth="300"/>
+        <Label layoutX="147.0" layoutY="82.0" text="Nome Fantasia" />
+        <TextField fx:id="txtNomeFantasia" layoutX="297.0" layoutY="77.0" prefWidth="300" />
 
-        <Label layoutX="70" layoutY="135" text="CNPJ"/>
-        <TextField fx:id="txtCnpj"
-                   layoutX="220" layoutY="130"
-                   prefWidth="300"/>
+        <Label layoutX="147.0" layoutY="127.0" text="CNPJ" />
+        <TextField fx:id="txtCnpj" layoutX="297.0" layoutY="122.0" prefWidth="300" />
 
-        <Label layoutX="70" layoutY="180" text="Endereço"/>
-        <TextField fx:id="txtEndereco"
-                   layoutX="220" layoutY="175"
-                   prefWidth="300"/>
+        <Label layoutX="147.0" layoutY="172.0" text="Endereço" />
+        <TextField fx:id="txtEndereco" layoutX="297.0" layoutY="167.0" prefWidth="300" />
 
-        <Label layoutX="70" layoutY="225" text="Telefone"/>
-        <TextField fx:id="txtTelefone"
-                   layoutX="220" layoutY="220"
-                   prefWidth="300"/>
+        <Label layoutX="147.0" layoutY="217.0" text="Telefone" />
+        <TextField fx:id="txtTelefone" layoutX="297.0" layoutY="212.0" prefWidth="300" />
 
-        <Label layoutX="70" layoutY="270" text="Categoria"/>
-        <TextField fx:id="txtCategoria"
-                   layoutX="220" layoutY="265"
-                   prefWidth="300"/>
+        <Label layoutX="147.0" layoutY="262.0" text="Categoria" />
+        <TextField fx:id="txtCategoria" layoutX="297.0" layoutY="257.0" prefWidth="300" />
 
-        <Label layoutX="70" layoutY="315" text="Nome do Gerente"/>
-        <TextField fx:id="txtNomeGerente"
-                   layoutX="220" layoutY="310"
-                   prefWidth="300"/>
+        <Label layoutX="147.0" layoutY="307.0" text="Nome do Gerente" />
+        <TextField fx:id="txtNomeGerente" layoutX="297.0" layoutY="302.0" prefWidth="300" />
 
-        <Label layoutX="70" layoutY="360" text="Email"/>
-        <TextField fx:id="txtEmail"
-                   layoutX="220" layoutY="355"
-                   prefWidth="300"/>
+        <Label layoutX="147.0" layoutY="352.0" text="Email" />
+        <TextField fx:id="txtEmail" layoutX="297.0" layoutY="347.0" prefWidth="300" />
 
-        <Label layoutX="70" layoutY="405" text="Senha"/>
-        <PasswordField fx:id="txtSenha"
-                       layoutX="220" layoutY="400"
-                       prefWidth="300"/>
+        <Label layoutX="147.0" layoutY="397.0" text="Senha" />
+        <PasswordField fx:id="txtSenha" layoutX="297.0" layoutY="392.0" prefWidth="300" />
 
-        <Button fx:id="btnSalvar"
-                text="Salvar Configuração"
-                layoutX="250"
-                layoutY="470"
-                onAction="#salvar"/>
+        <Button fx:id="btnSalvar" layoutX="314.0" layoutY="462.0" onAction="#salvar" text="Salvar Configuração" />
 
     </children>
 

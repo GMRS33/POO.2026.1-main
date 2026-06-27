@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450.0" prefWidth="600.0"
+xmlns="http://javafx.com/javafx/26"
+xmlns:fx="http://javafx.com/fxml/1"
+fx:controller="br.edu.ifpb.ads.foodjava.controller.CadastroGerenteController">
+
+    <children>
+
+        <Label layoutX="210" layoutY="20"
+               text="Cadastro do Gerente"
+               style="-fx-font-size:22px;-fx-font-weight:bold;"/>
+
+        <Label layoutX="90" layoutY="90" text="Nome"/>
+        <TextField fx:id="txtNome"
+                   layoutX="180"
+                   layoutY="85"
+                   prefWidth="280"/>
+
+        <Label layoutX="90" layoutY="140" text="Email"/>
+        <TextField fx:id="txtEmail"
+                   layoutX="180"
+                   layoutY="135"
+                   prefWidth="280"/>
+
+        <Label layoutX="90" layoutY="190" text="Senha"/>
+        <PasswordField fx:id="txtSenha"
+                       layoutX="180"
+                       layoutY="185"
+                       prefWidth="280"/>
+
+        <Button text="Cadastrar"
+                layoutX="180"
+                layoutY="300"
+                prefWidth="120"
+                onAction="#cadastrar"/>
+
+        <Button text="Voltar"
+                layoutX="340"
+                layoutY="300"
+                prefWidth="120"
+                onAction="#voltar"/>
+
+    </children>
+
+</AnchorPane>

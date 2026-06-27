@@ -45,6 +45,33 @@ public class ConfiguracaoInicialController {
     @FXML
     public void salvar(ActionEvent event) {
 
+        if (restauranteService.restauranteExiste() || gerenteService.gerenteExiste()) {
+
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setHeaderText(null);
+            alert.setContentText("O sistema já foi configurado.");
+            alert.showAndWait();
+
+            return;
+        }
+        
+        if (txtNomeFantasia.getText().isBlank()
+                || txtCnpj.getText().isBlank()
+                || txtEndereco.getText().isBlank()
+                || txtTelefone.getText().isBlank()
+                || txtCategoria.getText().isBlank()
+                || txtNomeGerente.getText().isBlank()
+                || txtEmail.getText().isBlank()
+                || txtSenha.getText().isBlank()) {
+
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setHeaderText(null);
+            alert.setContentText("Preencha todos os campos.");
+            alert.showAndWait();
+
+            return;
+        }
+
         Restaurante restaurante = new Restaurante(
                 txtNomeFantasia.getText(),
                 txtCnpj.getText(),
@@ -70,5 +97,6 @@ public class ConfiguracaoInicialController {
                 (Stage) txtNomeFantasia.getScene().getWindow(),
                 "Login.fxml");
     }
+    
 
 }

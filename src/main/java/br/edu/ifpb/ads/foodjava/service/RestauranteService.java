@@ -13,22 +13,28 @@ public class RestauranteService {
 
     public void configurarRestaurante(Restaurante restaurante) {
 
-        if (!repository.existeRestaurante()) {
-            repository.salvar(restaurante);
-        }
+        repository.salvar(restaurante);
 
     }
 
     public Restaurante buscarRestaurante() {
+
         return repository.buscar();
+
     }
 
     public void atualizarRestaurante(Restaurante restaurante) {
+
         repository.atualizar(restaurante);
+
     }
 
-    public boolean restauranteConfigurado() {
+    public boolean restauranteExiste() {
+
         return repository.existeRestaurante();
+
     }
 
+    
+    
 }

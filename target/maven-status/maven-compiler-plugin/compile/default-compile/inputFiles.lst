@@ -1,9 +1,18 @@
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\controller\CadastroClienteController.java
+C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\controller\CadastroGerenteController.java
+C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\controller\CadastroItemCardapioController.java
+C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\controller\CardapioClienteController.java
+C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\controller\CardapioController.java
+C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\controller\CarrinhoController.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\controller\ClienteController.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\controller\ConfiguracaoInicialController.java
+C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\controller\EditarItemCardapioController.java
+C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\controller\EditarRestauranteController.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\controller\ItemCardapioController.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\controller\LoginController.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\controller\PedidoController.java
+C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\controller\TelaClienteController.java
+C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\controller\TelaGerenteController.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\exception\ArquivoImportacaoException.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\exception\CancelamentoNaoPermitidoException.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\exception\DocumentoInvalidoException.java
@@ -13,6 +22,7 @@ C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\e
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\exception\StatusInvalidoException.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\exception\UsuarioDuplicadoException.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\MainApp.java
+C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\model\Carrinho.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\model\Categoria.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\model\Cliente.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\model\Gerente.java
@@ -35,4 +45,5 @@ C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\s
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\util\Caminhos.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\util\GeradorId.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\util\JsonUtil.java
+C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\util\Sessao.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\util\TrocarTela.java

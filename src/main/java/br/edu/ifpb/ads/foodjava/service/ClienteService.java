@@ -5,6 +5,7 @@ import java.util.List;
 import br.edu.ifpb.ads.foodjava.exception.SenhaInvalidaException;
 import br.edu.ifpb.ads.foodjava.exception.UsuarioDuplicadoException;
 import br.edu.ifpb.ads.foodjava.model.Cliente;
+import br.edu.ifpb.ads.foodjava.model.Gerente;
 import br.edu.ifpb.ads.foodjava.repository.ClienteRepository;
 
 public class ClienteService {
@@ -21,6 +22,16 @@ public class ClienteService {
             throw new UsuarioDuplicadoException();
         }
 
+        GerenteService gerenteService = new GerenteService();
+
+        Gerente gerente = gerenteService.buscarGerente();
+
+        if (gerente != null &&
+            gerente.getEmail().equalsIgnoreCase(cliente.getEmail())) {
+
+            throw new UsuarioDuplicadoException();   
+    }
+        
         repository.salvar(cliente);
     }
 

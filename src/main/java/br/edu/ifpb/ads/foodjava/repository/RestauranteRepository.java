@@ -14,13 +14,17 @@ public class RestauranteRepository {
 
     public Restaurante buscar() {
 
-        return JsonUtil.carregar(Caminhos.RESTAURANTE, Restaurante.class);
+        return JsonUtil.carregar(
+                Caminhos.RESTAURANTE,
+                Restaurante.class);
 
     }
 
     public void atualizar(Restaurante restaurante) {
 
-        JsonUtil.salvar(Caminhos.RESTAURANTE, restaurante);
+        JsonUtil.salvar(
+                Caminhos.RESTAURANTE,
+                restaurante);
 
     }
 

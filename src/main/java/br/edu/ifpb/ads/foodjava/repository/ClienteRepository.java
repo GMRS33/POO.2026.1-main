@@ -12,23 +12,36 @@ import br.edu.ifpb.ads.foodjava.util.JsonUtil;
 
 public class ClienteRepository {
 
-    public void salvar(Cliente cliente) {
+	public void salvar(Cliente cliente) {
 
-        List<Cliente> clientes = listar();
+	    System.out.println("===== SALVAR =====");
+	    System.out.println("Nome: " + cliente.getNome());
 
-        clientes.add(cliente);
+	    List<Cliente> clientes = listar();
 
-        JsonUtil.salvar(Caminhos.CLIENTES, clientes);
+	    System.out.println("Clientes antes: " + clientes.size());
 
-    }
+	    clientes.add(cliente);
 
-    @SuppressWarnings("unchecked")
+	    System.out.println("Clientes depois: " + clientes.size());
+
+	    JsonUtil.salvar(Caminhos.CLIENTES, clientes);
+
+	    System.out.println("Arquivo salvo!");
+
+	}
+
     public List<Cliente> listar() {
 
-    	Type tipo = new TypeToken<List<Cliente>>(){}.getType();
+        Type tipo = new TypeToken<List<Cliente>>() {
+        }.getType();
 
-    	List<Cliente> clientes =
-    	        JsonUtil.carregarLista(Caminhos.CLIENTES, tipo);
+        List<Cliente> clientes =
+                JsonUtil.carregarLista(Caminhos.CLIENTES, tipo);
+
+        if (clientes == null) {
+            clientes = new ArrayList<>();
+        }
 
         return clientes;
 

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="560" prefWidth="700"
+xmlns="http://javafx.com/javafx/26"
+xmlns:fx="http://javafx.com/fxml/1"
+fx:controller="br.edu.ifpb.ads.foodjava.controller.CadastroRestauranteController">
+
+    <children>
+
+        <Label layoutX="210"
+               layoutY="20"
+               text="Cadastro do Restaurante"
+               style="-fx-font-size:22px;-fx-font-weight:bold;"/>
+
+        <Label layoutX="60" layoutY="80" text="Nome Fantasia"/>
+        <TextField fx:id="txtNome" layoutX="220" layoutY="75" prefWidth="320"/>
+
+        <Label layoutX="60" layoutY="125" text="CNPJ"/>
+        <TextField fx:id="txtCnpj" layoutX="220" layoutY="120" prefWidth="320"/>
+
+        <Label layoutX="60" layoutY="170" text="Endereço"/>
+        <TextField fx:id="txtEndereco" layoutX="220" layoutY="165" prefWidth="320"/>
+
+        <Label layoutX="60" layoutY="215" text="Telefone"/>
+        <TextField fx:id="txtTelefone" layoutX="220" layoutY="210" prefWidth="320"/>
+
+        <Label layoutX="60" layoutY="260" text="Categoria"/>
+        <TextField fx:id="txtCategoria" layoutX="220" layoutY="255" prefWidth="320"/>
+
+        <Label layoutX="60" layoutY="305" text="Email"/>
+        <TextField fx:id="txtEmail" layoutX="220" layoutY="300" prefWidth="320"/>
+
+        <Button text="Cadastrar"
+                layoutX="220"
+                layoutY="410"
+                prefWidth="140"
+                onAction="#cadastrar"/>
+
+        <Button text="Voltar"
+                layoutX="400"
+                layoutY="410"
+                prefWidth="140"
+                onAction="#voltar"/>
+
+    </children>
+
+</AnchorPane>

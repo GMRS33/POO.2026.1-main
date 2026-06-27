@@ -1,5 +1,6 @@
 package br.edu.ifpb.ads.foodjava.service;
 
+import br.edu.ifpb.ads.foodjava.exception.SenhaInvalidaException;
 import br.edu.ifpb.ads.foodjava.model.Gerente;
 import br.edu.ifpb.ads.foodjava.repository.GerenteRepository;
 
@@ -27,4 +28,22 @@ public class GerenteService {
         return repository.existeGerente();
     }
 
+    public Gerente login(String email, String senha) throws SenhaInvalidaException {
+
+        Gerente gerente = repository.buscar();
+
+        if (gerente == null) {
+            return null;
+        }
+
+        if (!gerente.getEmail().equalsIgnoreCase(email)) {
+            return null;
+        }
+
+        if (!gerente.getSenha().equals(senha)) {
+            throw new SenhaInvalidaException();
+        }
+
+        return gerente;
+    }
 }

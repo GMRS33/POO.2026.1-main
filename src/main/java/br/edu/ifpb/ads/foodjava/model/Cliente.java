@@ -6,12 +6,8 @@ public class Cliente extends Usuario {
     private String telefone;
     private String endereco;
 
-    public Cliente(String nome,
-                   String email,
-                   String senha,
-                   String cpf,
-                   String telefone,
-                   String endereco) {
+    public Cliente(String nome, String email, String senha,
+                   String cpf, String telefone, String endereco) {
 
         super(nome, email, senha);
 
@@ -43,4 +39,5 @@ public class Cliente extends Usuario {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
+
 }

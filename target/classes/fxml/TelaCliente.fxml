@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500"
+            prefWidth="700"
+            xmlns="http://javafx.com/javafx/26"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.edu.ifpb.ads.foodjava.controller.TelaClienteController">
+
+    <children>
+
+        <Label layoutX="260"
+               layoutY="30"
+               text="Área do Cliente"
+               style="-fx-font-size:24px;-fx-font-weight:bold;"/>
+
+        <Button fx:id="btnCardapio"
+        		layoutX="220"
+                layoutY="120"
+                prefWidth="250"
+                prefHeight="40"
+                text="Visualizar Cardápio"
+                onAction="#abrirCardapio"/>
+
+        <Button layoutX="220"
+                layoutY="190"
+                prefWidth="250"
+                prefHeight="40"
+                text="Meu Carrinho"
+                onAction="#abrirCarrinho"/>
+
+        <Button layoutX="220"
+                layoutY="260"
+                prefWidth="250"
+                prefHeight="40"
+                text="Meus Pedidos"
+                onAction="#abrirPedidos"/>
+
+        <Button layoutX="220"
+                layoutY="360"
+                prefWidth="250"
+                prefHeight="40"
+                text="Sair"
+                onAction="#sair"/>
+
+    </children>
+
+</AnchorPane>
