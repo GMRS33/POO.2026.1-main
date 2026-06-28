@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.google.gson.reflect.TypeToken;
 
+import br.edu.ifpb.ads.foodjava.model.Cliente;
 import br.edu.ifpb.ads.foodjava.model.Pedido;
 import br.edu.ifpb.ads.foodjava.util.Caminhos;
 import br.edu.ifpb.ads.foodjava.util.JsonUtil;
@@ -40,7 +41,7 @@ public class PedidoRepository {
 
         for (Pedido pedido : listar()) {
 
-            if (pedido.getId().equalsIgnoreCase(id)) {
+            if (pedido.getId().equals(id)) {
                 return pedido;
             }
 
@@ -50,19 +51,39 @@ public class PedidoRepository {
 
     }
 
+    public List<Pedido> buscarPorCliente(Cliente cliente) {
+
+        List<Pedido> pedidosCliente = new ArrayList<>();
+
+        for (Pedido pedido : listar()) {
+
+            if (pedido.getCliente() != null &&
+                pedido.getCliente().getEmail().equalsIgnoreCase(cliente.getEmail())) {
+
+                pedidosCliente.add(pedido);
+
+            }
+
+        }
+
+        return pedidosCliente;
+
+    }
+
     public void atualizar(Pedido pedidoAtualizado) {
 
         List<Pedido> pedidos = listar();
 
         for (int i = 0; i < pedidos.size(); i++) {
 
-            if (pedidos.get(i).getId().equalsIgnoreCase(pedidoAtualizado.getId())) {
+            if (pedidos.get(i).getId().equals(pedidoAtualizado.getId())) {
 
                 pedidos.set(i, pedidoAtualizado);
 
                 JsonUtil.salvar(Caminhos.PEDIDOS, pedidos);
 
                 return;
+
             }
 
         }
@@ -73,7 +94,7 @@ public class PedidoRepository {
 
         List<Pedido> pedidos = listar();
 
-        pedidos.removeIf(p -> p.getId().equalsIgnoreCase(pedido.getId()));
+        pedidos.removeIf(p -> p.getId().equals(pedido.getId()));
 
         JsonUtil.salvar(Caminhos.PEDIDOS, pedidos);
 

@@ -32,6 +32,7 @@ public class ClienteService {
             throw new UsuarioDuplicadoException();   
     }
         
+        
         repository.salvar(cliente);
     }
 

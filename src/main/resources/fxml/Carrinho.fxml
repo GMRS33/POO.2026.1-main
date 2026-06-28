@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0"
+            prefWidth="900.0"
+            xmlns="http://javafx.com/javafx/26"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.edu.ifpb.ads.foodjava.controller.CarrinhoController">
+
+    <children>
+
+        <Label layoutX="350"
+               layoutY="20"
+               text="Meu Carrinho"
+               style="-fx-font-size:24px; -fx-font-weight:bold;"/>
+
+        <TableView fx:id="tableCarrinho"
+                   layoutX="30"
+                   layoutY="70"
+                   prefWidth="840"
+                   prefHeight="360">
+
+            <columns>
+
+                <TableColumn fx:id="colNome"
+                             text="Item"
+                             prefWidth="320"/>
+
+                <TableColumn fx:id="colQuantidade"
+                             text="Quantidade"
+                             prefWidth="120"/>
+
+                <TableColumn fx:id="colPreco"
+                             text="Preço"
+                             prefWidth="180"/>
+
+                <TableColumn fx:id="colSubtotal"
+                             text="Subtotal"
+                             prefWidth="220"/>
+
+            </columns>
+
+        </TableView>
+
+        <Label text="Total:"
+               layoutX="560"
+               layoutY="450"
+               style="-fx-font-size:18px; -fx-font-weight:bold;"/>
+
+        <Label fx:id="lblTotal"
+               layoutX="620"
+               layoutY="450"
+               text="R$ 0,00"
+               style="-fx-font-size:18px;"/>
+
+        <Button text="Remover Item"
+                layoutX="40"
+                layoutY="500"
+                prefWidth="160"
+                onAction="#removerItem"/>
+
+        <Button text="Limpar Carrinho"
+                layoutX="230"
+                layoutY="500"
+                prefWidth="160"
+                onAction="#limparCarrinho"/>
+
+        <Button text="Finalizar Pedido"
+                layoutX="420"
+                layoutY="500"
+                prefWidth="180"
+                onAction="#finalizarPedido"/>
+
+        <Button text="Voltar"
+                layoutX="640"
+                layoutY="500"
+                prefWidth="160"
+                onAction="#voltar"/>
+
+    </children>
+
+</AnchorPane>

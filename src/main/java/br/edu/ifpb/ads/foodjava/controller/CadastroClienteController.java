@@ -12,70 +12,63 @@ import javafx.stage.Stage;
 
 public class CadastroClienteController {
 
-    @FXML
-    private TextField txtNome;
+	@FXML
+	private TextField txtNome;
 
-    @FXML
-    private TextField txtCpf;
+	@FXML
+	private TextField txtCpf;
 
-    @FXML
-    private TextField txtTelefone;
+	@FXML
+	private TextField txtTelefone;
 
-    @FXML
-    private TextField txtEndereco;
+	@FXML
+	private TextField txtEndereco;
 
-    @FXML
-    private TextField txtEmail;
+	@FXML
+	private TextField txtEmail;
 
-    @FXML
-    private PasswordField txtSenha;
+	@FXML
+	private PasswordField txtSenha;
 
-    private ClienteService service = new ClienteService();
+	private ClienteService service = new ClienteService();
 
-    @FXML
-    public void cadastrar() {
+	@FXML
+	public void cadastrar() {
 
-        try {
+		try {
 
-        	Cliente cliente = new Cliente(
-        	        txtNome.getText(),
-        	        txtEmail.getText(),
-        	        txtSenha.getText(),
-        	        txtCpf.getText(),
-        	        txtTelefone.getText(),
-        	        txtEndereco.getText());
+			Cliente cliente = new Cliente(txtNome.getText(), txtEmail.getText(), txtSenha.getText(), txtCpf.getText(),
+					txtTelefone.getText(), txtEndereco.getText());
 
-            cliente.setNome(txtNome.getText());
-            cliente.setEmail(txtEmail.getText());
-            cliente.setSenha(txtSenha.getText());
+			cliente.setNome(txtNome.getText());
+			cliente.setEmail(txtEmail.getText());
+			cliente.setSenha(txtSenha.getText());
 
-            service.cadastrarCliente(cliente);
+			service.cadastrarCliente(cliente);
 
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setHeaderText(null);
-            alert.setContentText("Cliente cadastrado com sucesso!");
-            alert.showAndWait();
+			Alert alert = new Alert(Alert.AlertType.INFORMATION);
+			alert.setHeaderText(null);
+			alert.setContentText("Cliente cadastrado com sucesso!");
+			alert.showAndWait();
 
-            voltar();
+			voltar();
 
-        } catch (UsuarioDuplicadoException e) {
+		} catch (UsuarioDuplicadoException e) {
 
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setHeaderText(null);
-            alert.setContentText(e.getMessage());
-            alert.showAndWait();
+			Alert alert = new Alert(Alert.AlertType.ERROR);
+			alert.setHeaderText(null);
+			alert.setContentText(e.getMessage());
+			alert.showAndWait();
 
-        }
+		}
 
-    }
+	}
 
-    @FXML
-    public void voltar() {
+	@FXML
+	public void voltar() {
 
-        TrocarTela.abrir(
-                (Stage) txtNome.getScene().getWindow(),
-                "Login.fxml");
+		TrocarTela.abrir((Stage) txtNome.getScene().getWindow(), "Login.fxml");
 
-    }
+	}
 
 }

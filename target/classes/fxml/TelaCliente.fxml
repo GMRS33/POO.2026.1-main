@@ -32,12 +32,13 @@
                 text="Meu Carrinho"
                 onAction="#abrirCarrinho"/>
 
-        <Button layoutX="220"
-                layoutY="260"
-                prefWidth="250"
-                prefHeight="40"
-                text="Meus Pedidos"
-                onAction="#abrirPedidos"/>
+        <Button
+   				text="Meus Pedidos"
+    			layoutX="220"
+    			layoutY="260"
+    			prefWidth="250"
+    			prefHeight="40"
+    			onAction="#abrirPedidos"/>
 
         <Button layoutX="220"
                 layoutY="360"

@@ -4,60 +4,75 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 public class Pedido {
-	private String id;
-	private LocalDateTime dataHora;
-	private List<ItemPedido> itens;
-	private double valorTotal;
-	private StatusPedido status;
-	
-	public Pedido(String id, LocalDateTime dataHora, List<ItemPedido> itens, double valorTotal, StatusPedido status) {
-		super();
-		this.id = id;
-		this.dataHora = dataHora;
-		this.itens = itens;
-		this.valorTotal = valorTotal;
-		this.status = status;
-	}
 
-	public String getId() {
-		return id;
-	}
+    private String id;
+    private Cliente cliente;
+    private LocalDateTime dataHora;
+    private List<ItemPedido> itens;
+    private double valorTotal;
+    private StatusPedido status;
 
-	public void setId(String id) {
-		this.id = id;
-	}
+    public Pedido(String id,
+                  Cliente cliente,
+                  LocalDateTime dataHora,
+                  List<ItemPedido> itens,
+                  double valorTotal,
+                  StatusPedido status) {
 
-	public LocalDateTime getDataHora() {
-		return dataHora;
-	}
+        this.id = id;
+        this.cliente = cliente;
+        this.dataHora = dataHora;
+        this.itens = itens;
+        this.valorTotal = valorTotal;
+        this.status = status;
+    }
 
-	public void setDataHora(LocalDateTime dataHora) {
-		this.dataHora = dataHora;
-	}
+    public String getId() {
+        return id;
+    }
 
-	public List<ItemPedido> getItens() {
-		return itens;
-	}
+    public void setId(String id) {
+        this.id = id;
+    }
 
-	public void setItens(List<ItemPedido> itens) {
-		this.itens = itens;
-	}
+    public Cliente getCliente() {
+        return cliente;
+    }
 
-	public double getValorTotal() {
-		return valorTotal;
-	}
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
 
-	public void setValorTotal(double valorTotal) {
-		this.valorTotal = valorTotal;
-	}
+    public LocalDateTime getDataHora() {
+        return dataHora;
+    }
 
-	public StatusPedido getStatus() {
-		return status;
-	}
+    public void setDataHora(LocalDateTime dataHora) {
+        this.dataHora = dataHora;
+    }
 
-	public void setStatus(StatusPedido status) {
-		this.status = status;
-	}
-	
-	
+    public List<ItemPedido> getItens() {
+        return itens;
+    }
+
+    public void setItens(List<ItemPedido> itens) {
+        this.itens = itens;
+    }
+
+    public double getValorTotal() {
+        return valorTotal;
+    }
+
+    public void setValorTotal(double valorTotal) {
+        this.valorTotal = valorTotal;
+    }
+
+    public StatusPedido getStatus() {
+        return status;
+    }
+
+    public void setStatus(StatusPedido status) {
+        this.status = status;
+    }
+
 }

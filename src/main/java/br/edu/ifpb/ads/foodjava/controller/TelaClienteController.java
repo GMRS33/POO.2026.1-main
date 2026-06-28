@@ -8,43 +8,43 @@ import javafx.stage.Stage;
 
 public class TelaClienteController {
 
-    @FXML
-    private Button btnCardapio;
+	@FXML
+	private Button btnCardapio;
 
-    @FXML
-    public void abrirCardapio() {
+	@FXML
+	public void abrirCardapio() {
 
-        TrocarTela.abrir(
-                (Stage) btnCardapio.getScene().getWindow(),
-                "CardapioCliente.fxml");
+		TrocarTela.abrir((Stage) btnCardapio.getScene().getWindow(), "CardapioCliente.fxml");
 
-    }
+	}
 
-    @FXML
-    public void abrirCarrinho() {
+	@FXML
+	public void abrirCarrinho() {
 
-        TrocarTela.abrir(
-                (Stage) btnCardapio.getScene().getWindow(),
-                "Carrinho.fxml");
+		TrocarTela.abrir((Stage) btnCardapio.getScene().getWindow(), "Carrinho.fxml");
 
-    }
+	}
 
-    @FXML
-    public void abrirPedidos() {
+	@FXML
+	public void abrirPedidos() {
 
-        // será implementado no módulo 4
+		TrocarTela.abrir(
 
-    }
+				(Stage) btnCardapio.getScene().getWindow(),
 
-    @FXML
-    public void sair() {
+				"MeusPedidos.fxml"
 
-    	Sessao.limpar();
-    	
-        TrocarTela.abrir(
-                (Stage) btnCardapio.getScene().getWindow(),
-                "Login.fxml");
+		);
 
-    }
+	}
+
+	@FXML
+	public void sair() {
+
+		Sessao.limpar();
+
+		TrocarTela.abrir((Stage) btnCardapio.getScene().getWindow(), "Login.fxml");
+
+	}
 
 }

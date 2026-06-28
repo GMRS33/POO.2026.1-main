@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="650"
+            prefWidth="1000"
+            xmlns="http://javafx.com/javafx/26"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.edu.ifpb.ads.foodjava.controller.PedidosGerenteController">
+
+    <children>
+
+        <Label layoutX="360"
+               layoutY="20"
+               text="Gerenciamento de Pedidos"
+               style="-fx-font-size:24px;-fx-font-weight:bold;"/>
+
+        <TableView fx:id="tablePedidos"
+                   layoutX="30"
+                   layoutY="70"
+                   prefWidth="940"
+                   prefHeight="420">
+
+            <columns>
+
+                <TableColumn fx:id="colId"
+                             text="Código"
+                             prefWidth="180"/>
+
+                <TableColumn fx:id="colCliente"
+                             text="Cliente"
+                             prefWidth="180"/>
+
+                <TableColumn fx:id="colData"
+                             text="Data"
+                             prefWidth="180"/>
+
+                <TableColumn fx:id="colTotal"
+                             text="Total"
+                             prefWidth="120"/>
+
+                <TableColumn fx:id="colStatus"
+                             text="Status"
+                             prefWidth="220"/>
+
+            </columns>
+
+        </TableView>
+
+        <ComboBox fx:id="comboStatus"
+                  layoutX="260"
+                  layoutY="530"
+                  prefWidth="250"/>
+
+        <Button text="Alterar Status"
+                layoutX="540"
+                layoutY="530"
+                prefWidth="170"
+                onAction="#alterarStatus"/>
+
+        <Button text="Atualizar"
+                layoutX="260"
+                layoutY="580"
+                prefWidth="170"
+                onAction="#atualizar"/>
+
+        <Button text="Voltar"
+                layoutX="540"
+                layoutY="580"
+                prefWidth="170"
+                onAction="#voltar"/>
+
+    </children>
+
+</AnchorPane>
