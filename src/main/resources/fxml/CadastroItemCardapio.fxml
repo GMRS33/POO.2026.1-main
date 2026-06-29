@@ -5,7 +5,7 @@
 
 <AnchorPane prefHeight="550"
             prefWidth="700"
-            xmlns="http://javafx.com/javafx/26"
+            xmlns="http://javafx.com/javafx/21"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="br.edu.ifpb.ads.foodjava.controller.CadastroItemCardapioController">
 
@@ -54,7 +54,7 @@
         <Button text="Salvar"
                 layoutX="200"
                 layoutY="450"
-                onAction="#salvar"/>
+                onAction="#cadastrar"/>
 
         <Button text="Voltar"
                 layoutX="320"

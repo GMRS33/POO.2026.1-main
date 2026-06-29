@@ -1,56 +1,29 @@
 [
   {
-    "id": "23328eed-7644-46ef-b112-dcc4b4ed3e9a",
+    "id": "4bc72200-0f85-4755-8a99-97ba4b5b5c66",
     "cliente": {
-      "cpf": "g",
-      "telefone": "g",
-      "endereco": "g",
-      "nome": "g",
-      "email": "g",
-      "senha": "g"
+      "cpf": "53755529491",
+      "telefone": "83996848274",
+      "endereco": "Rua tal",
+      "nome": "Maria",
+      "email": "maria@gmail.com",
+      "senha": "maria"
     },
-    "dataHora": "2026-06-28T11:16:26.716948500",
+    "dataHora": "2026-06-29T11:11:35.734628600",
     "itens": [
       {
         "item": {
-          "nome": "macarrao",
-          "descricao": "prato de massa",
-          "preco": 30.0,
-          "categoria": "PRATO_PRINCIPAL",
-          "disponivel": false,
+          "nome": "feijao",
+          "descricao": "feijao",
+          "preco": 20.0,
+          "categoria": "ENTRADA",
+          "disponivel": true,
           "imagemPath": ""
         },
         "quantidade": 1
       }
     ],
-    "valorTotal": 30.0,
-    "status": "RECEBIDO"
-  },
-  {
-    "id": "621d386b-58f3-4647-8fc6-5bdeb7eb6d35",
-    "cliente": {
-      "cpf": "ggg",
-      "telefone": "ggg",
-      "endereco": "ggg",
-      "nome": "ggg",
-      "email": "ggg",
-      "senha": "ggg"
-    },
-    "dataHora": "2026-06-28T11:17:56.008998900",
-    "itens": [
-      {
-        "item": {
-          "nome": "macarrao",
-          "descricao": "prato de massa",
-          "preco": 30.0,
-          "categoria": "PRATO_PRINCIPAL",
-          "disponivel": false,
-          "imagemPath": ""
-        },
-        "quantidade": 1
-      }
-    ],
-    "valorTotal": 30.0,
-    "status": "RECEBIDO"
+    "valorTotal": 20.0,
+    "status": "EM_PREPARO"
   }
 ]

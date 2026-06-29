@@ -1,10 +1,10 @@
 [
   {
-    "nome": "macarrao",
-    "descricao": "prato de massa",
-    "preco": 30.0,
-    "categoria": "PRATO_PRINCIPAL",
-    "disponivel": false,
+    "nome": "feijao",
+    "descricao": "feijao",
+    "preco": 20.0,
+    "categoria": "ENTRADA",
+    "disponivel": true,
     "imagemPath": ""
   }
 ]

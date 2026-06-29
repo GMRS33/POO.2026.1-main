@@ -4,14 +4,14 @@ import br.edu.ifpb.ads.foodjava.model.Gerente;
 import br.edu.ifpb.ads.foodjava.model.Restaurante;
 import br.edu.ifpb.ads.foodjava.service.GerenteService;
 import br.edu.ifpb.ads.foodjava.service.RestauranteService;
+import br.edu.ifpb.ads.foodjava.util.TrocarTela;
+import br.edu.ifpb.ads.foodjava.util.Validacao;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import br.edu.ifpb.ads.foodjava.util.TrocarTela;
 import javafx.stage.Stage;
-
 
 public class ConfiguracaoInicialController {
 
@@ -45,31 +45,43 @@ public class ConfiguracaoInicialController {
     @FXML
     public void salvar(ActionEvent event) {
 
-        if (restauranteService.restauranteExiste() || gerenteService.gerenteExiste()) {
+        if (restauranteService.restauranteExiste()) {
 
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setHeaderText(null);
-            alert.setContentText("O sistema já foi configurado.");
-            alert.showAndWait();
-
+            mostrarAviso("O sistema já foi configurado.");
             return;
+
         }
-        
-        if (txtNomeFantasia.getText().isBlank()
-                || txtCnpj.getText().isBlank()
-                || txtEndereco.getText().isBlank()
-                || txtTelefone.getText().isBlank()
-                || txtCategoria.getText().isBlank()
-                || txtNomeGerente.getText().isBlank()
-                || txtEmail.getText().isBlank()
-                || txtSenha.getText().isBlank()) {
 
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setHeaderText(null);
-            alert.setContentText("Preencha todos os campos.");
-            alert.showAndWait();
+        if (Validacao.campoVazio(txtNomeFantasia.getText())
+                || Validacao.campoVazio(txtEndereco.getText())
+                || Validacao.campoVazio(txtCategoria.getText())
+                || Validacao.campoVazio(txtNomeGerente.getText())
+                || Validacao.campoVazio(txtSenha.getText())) {
 
+            mostrarAviso("Preencha todos os campos.");
             return;
+
+        }
+
+        if (!Validacao.cnpjValido(txtCnpj.getText())) {
+
+            mostrarAviso("CNPJ inválido.");
+            return;
+
+        }
+
+        if (!Validacao.telefoneValido(txtTelefone.getText())) {
+
+            mostrarAviso("Telefone inválido.");
+            return;
+
+        }
+
+        if (!Validacao.emailValido(txtEmail.getText())) {
+
+            mostrarAviso("E-mail inválido.");
+            return;
+
         }
 
         Restaurante restaurante = new Restaurante(
@@ -96,7 +108,16 @@ public class ConfiguracaoInicialController {
         TrocarTela.abrir(
                 (Stage) txtNomeFantasia.getScene().getWindow(),
                 "Login.fxml");
+
     }
-    
+
+    private void mostrarAviso(String mensagem) {
+
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setHeaderText(null);
+        alert.setContentText(mensagem);
+        alert.showAndWait();
+
+    }
 
 }

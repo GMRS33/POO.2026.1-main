@@ -1,18 +1,10 @@
 [
   {
-    "cpf": "g",
-    "telefone": "g",
-    "endereco": "g",
-    "nome": "g",
-    "email": "g",
-    "senha": "g"
-  },
-  {
-    "cpf": "ggg",
-    "telefone": "ggg",
-    "endereco": "ggg",
-    "nome": "ggg",
-    "email": "ggg",
-    "senha": "ggg"
+    "cpf": "53755529491",
+    "telefone": "83996848274",
+    "endereco": "Rua tal",
+    "nome": "Maria",
+    "email": "maria@gmail.com",
+    "senha": "maria"
   }
 ]

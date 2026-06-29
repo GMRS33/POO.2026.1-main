@@ -3,6 +3,7 @@ package br.edu.ifpb.ads.foodjava.controller;
 import br.edu.ifpb.ads.foodjava.model.Restaurante;
 import br.edu.ifpb.ads.foodjava.service.RestauranteService;
 import br.edu.ifpb.ads.foodjava.util.TrocarTela;
+import br.edu.ifpb.ads.foodjava.util.Validacao;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
@@ -51,6 +52,37 @@ public class EditarRestauranteController {
     @FXML
     public void salvar() {
 
+        if (Validacao.campoVazio(txtNomeFantasia.getText())
+                || Validacao.campoVazio(txtEndereco.getText())
+                || Validacao.campoVazio(txtCategoria.getText())
+                || Validacao.campoVazio(txtEmail.getText())) {
+
+            mostrarAviso("Preencha todos os campos.");
+            return;
+
+        }
+
+        if (!Validacao.cnpjValido(txtCnpj.getText())) {
+
+            mostrarAviso("CNPJ inválido.");
+            return;
+
+        }
+
+        if (!Validacao.telefoneValido(txtTelefone.getText())) {
+
+            mostrarAviso("Telefone inválido.");
+            return;
+
+        }
+
+        if (!Validacao.emailValido(txtEmail.getText())) {
+
+            mostrarAviso("E-mail inválido.");
+            return;
+
+        }
+
         Restaurante restaurante = new Restaurante(
 
                 txtNomeFantasia.getText(),
@@ -58,13 +90,15 @@ public class EditarRestauranteController {
                 txtEndereco.getText(),
                 txtTelefone.getText(),
                 txtCategoria.getText(),
-                txtEmail.getText());
+                txtEmail.getText()
+
+        );
 
         service.atualizarRestaurante(restaurante);
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setHeaderText(null);
-        alert.setContentText("Restaurante atualizado com sucesso.");
+        alert.setContentText("Restaurante atualizado com sucesso!");
         alert.showAndWait();
 
     }
@@ -75,6 +109,15 @@ public class EditarRestauranteController {
         TrocarTela.abrir(
                 (Stage) txtNomeFantasia.getScene().getWindow(),
                 "TelaGerente.fxml");
+
+    }
+
+    private void mostrarAviso(String mensagem) {
+
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setHeaderText(null);
+        alert.setContentText(mensagem);
+        alert.showAndWait();
 
     }
 

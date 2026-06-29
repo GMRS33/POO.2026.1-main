@@ -4,6 +4,7 @@ import br.edu.ifpb.ads.foodjava.exception.UsuarioDuplicadoException;
 import br.edu.ifpb.ads.foodjava.model.Cliente;
 import br.edu.ifpb.ads.foodjava.service.ClienteService;
 import br.edu.ifpb.ads.foodjava.util.TrocarTela;
+import br.edu.ifpb.ads.foodjava.util.Validacao;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
@@ -12,63 +13,107 @@ import javafx.stage.Stage;
 
 public class CadastroClienteController {
 
-	@FXML
-	private TextField txtNome;
+    @FXML
+    private TextField txtNome;
 
-	@FXML
-	private TextField txtCpf;
+    @FXML
+    private TextField txtCpf;
 
-	@FXML
-	private TextField txtTelefone;
+    @FXML
+    private TextField txtTelefone;
 
-	@FXML
-	private TextField txtEndereco;
+    @FXML
+    private TextField txtEndereco;
 
-	@FXML
-	private TextField txtEmail;
+    @FXML
+    private TextField txtEmail;
 
-	@FXML
-	private PasswordField txtSenha;
+    @FXML
+    private PasswordField txtSenha;
 
-	private ClienteService service = new ClienteService();
+    private ClienteService service = new ClienteService();
 
-	@FXML
-	public void cadastrar() {
+    @FXML
+    public void cadastrar() {
 
-		try {
+        if (Validacao.campoVazio(txtNome.getText())
+                || Validacao.campoVazio(txtCpf.getText())
+                || Validacao.campoVazio(txtTelefone.getText())
+                || Validacao.campoVazio(txtEndereco.getText())
+                || Validacao.campoVazio(txtEmail.getText())
+                || Validacao.campoVazio(txtSenha.getText())) {
 
-			Cliente cliente = new Cliente(txtNome.getText(), txtEmail.getText(), txtSenha.getText(), txtCpf.getText(),
-					txtTelefone.getText(), txtEndereco.getText());
+            mostrarAviso("Todos os campos são obrigatórios.");
+            return;
+        }
 
-			cliente.setNome(txtNome.getText());
-			cliente.setEmail(txtEmail.getText());
-			cliente.setSenha(txtSenha.getText());
+        if (!Validacao.cpfValido(txtCpf.getText())) {
 
-			service.cadastrarCliente(cliente);
+            mostrarAviso("CPF inválido.");
+            return;
+        }
 
-			Alert alert = new Alert(Alert.AlertType.INFORMATION);
-			alert.setHeaderText(null);
-			alert.setContentText("Cliente cadastrado com sucesso!");
-			alert.showAndWait();
+        if (!Validacao.telefoneValido(txtTelefone.getText())) {
 
-			voltar();
+            mostrarAviso("Telefone inválido.");
+            return;
+        }
 
-		} catch (UsuarioDuplicadoException e) {
+        if (!Validacao.emailValido(txtEmail.getText())) {
 
-			Alert alert = new Alert(Alert.AlertType.ERROR);
-			alert.setHeaderText(null);
-			alert.setContentText(e.getMessage());
-			alert.showAndWait();
+            mostrarAviso("E-mail inválido.");
+            return;
+        }
 
-		}
+        Cliente cliente = new Cliente(
+                txtNome.getText().trim(),
+                txtEmail.getText().trim(),
+                txtSenha.getText(),
+                txtCpf.getText().trim(),
+                txtTelefone.getText().trim(),
+                txtEndereco.getText().trim()
+        );
 
-	}
+        try {
 
-	@FXML
-	public void voltar() {
+            service.cadastrarCliente(cliente);
 
-		TrocarTela.abrir((Stage) txtNome.getScene().getWindow(), "Login.fxml");
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText(null);
+            alert.setContentText("Cliente cadastrado com sucesso!");
+            alert.showAndWait();
 
-	}
+            TrocarTela.abrir(
+                    (Stage) txtNome.getScene().getWindow(),
+                    "Login.fxml");
+
+        } catch (UsuarioDuplicadoException e) {
+
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setContentText(e.getMessage());
+            alert.showAndWait();
+
+        }
+
+    }
+
+    private void mostrarAviso(String mensagem) {
+
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setHeaderText(null);
+        alert.setContentText(mensagem);
+        alert.showAndWait();
+
+    }
+
+    @FXML
+    public void voltar() {
+
+        TrocarTela.abrir(
+                (Stage) txtNome.getScene().getWindow(),
+                "Login.fxml");
+
+    }
 
 }
