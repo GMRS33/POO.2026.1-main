@@ -13,13 +13,18 @@ public class TrocarTela {
 
         try {
 
-            Parent root = FXMLLoader.load(TrocarTela.class.getResource("/fxml/" + fxml));
+        	Parent root = FXMLLoader.load(
+        	        TrocarTela.class.getResource("/fxml/" + fxml));
 
-            Scene scene = new Scene(root);
+        	Scene scene = new Scene(root);
 
-            stage.setScene(scene);
+        	scene.getStylesheets().add(
+        	        TrocarTela.class
+        	                .getResource("/css/estilo.css")
+        	                .toExternalForm());
 
-            stage.show();
+        	stage.setScene(scene);
+        	stage.show();
 
         } catch (IOException e) {
 

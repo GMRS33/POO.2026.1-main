@@ -2,6 +2,7 @@ package br.edu.ifpb.ads.foodjava.controller;
 
 import br.edu.ifpb.ads.foodjava.model.Restaurante;
 import br.edu.ifpb.ads.foodjava.service.RestauranteService;
+import br.edu.ifpb.ads.foodjava.util.MascaraUtil;
 import br.edu.ifpb.ads.foodjava.util.TrocarTela;
 import br.edu.ifpb.ads.foodjava.util.Validacao;
 import javafx.fxml.FXML;
@@ -33,6 +34,9 @@ public class EditarRestauranteController {
 
     @FXML
     public void initialize() {
+
+        MascaraUtil.aplicarMascaraCnpj(txtCnpj);
+        MascaraUtil.aplicarMascaraTelefone(txtTelefone);
 
         Restaurante restaurante = service.buscarRestaurante();
 
@@ -85,12 +89,12 @@ public class EditarRestauranteController {
 
         Restaurante restaurante = new Restaurante(
 
-                txtNomeFantasia.getText(),
-                txtCnpj.getText(),
-                txtEndereco.getText(),
-                txtTelefone.getText(),
-                txtCategoria.getText(),
-                txtEmail.getText()
+                txtNomeFantasia.getText().trim(),
+                txtCnpj.getText().trim(),
+                txtEndereco.getText().trim(),
+                txtTelefone.getText().trim(),
+                txtCategoria.getText().trim(),
+                txtEmail.getText().trim()
 
         );
 

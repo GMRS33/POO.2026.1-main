@@ -32,7 +32,7 @@ public class TelaClienteController {
 
 				(Stage) btnCardapio.getScene().getWindow(),
 
-				"MeusPedidos.fxml"
+				"Pedidoscliente.fxml"
 
 		);
 

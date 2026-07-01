@@ -3,6 +3,7 @@ package br.edu.ifpb.ads.foodjava.controller;
 import br.edu.ifpb.ads.foodjava.exception.UsuarioDuplicadoException;
 import br.edu.ifpb.ads.foodjava.model.Cliente;
 import br.edu.ifpb.ads.foodjava.service.ClienteService;
+import br.edu.ifpb.ads.foodjava.util.MascaraUtil;
 import br.edu.ifpb.ads.foodjava.util.TrocarTela;
 import br.edu.ifpb.ads.foodjava.util.Validacao;
 import javafx.fxml.FXML;
@@ -32,6 +33,14 @@ public class CadastroClienteController {
     private PasswordField txtSenha;
 
     private ClienteService service = new ClienteService();
+
+    @FXML
+    public void initialize() {
+
+        MascaraUtil.aplicarMascaraCpf(txtCpf);
+        MascaraUtil.aplicarMascaraTelefone(txtTelefone);
+
+    }
 
     @FXML
     public void cadastrar() {
@@ -71,8 +80,7 @@ public class CadastroClienteController {
                 txtSenha.getText(),
                 txtCpf.getText().trim(),
                 txtTelefone.getText().trim(),
-                txtEndereco.getText().trim()
-        );
+                txtEndereco.getText().trim());
 
         try {
 

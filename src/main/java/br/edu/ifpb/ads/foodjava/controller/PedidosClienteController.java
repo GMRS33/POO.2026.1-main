@@ -14,7 +14,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
-public class MeusPedidosController {
+public class PedidosClienteController {
 
 	@FXML
 	private TableView<Pedido> tablePedidos;

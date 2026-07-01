@@ -10,8 +10,8 @@ C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\c
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\controller\EditarRestauranteController.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\controller\ItemCardapioController.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\controller\LoginController.java
-C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\controller\MeusPedidosController.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\controller\PedidoController.java
+C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\controller\PedidosClienteController.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\controller\PedidosGerenteController.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\controller\TelaClienteController.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\controller\TelaGerenteController.java
@@ -48,6 +48,7 @@ C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\u
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\util\GeradorId.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\util\JsonUtil.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\util\LocalDateTimeAdapter.java
+C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\util\MascaraUtil.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\util\Sessao.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\util\TrocarTela.java
 C:\Users\Michel\Desktop\POO.2026.1-main\src\main\java\br\edu\ifpb\ads\foodjava\util\Validacao.java

@@ -6,5 +6,13 @@
     "nome": "Maria",
     "email": "maria@gmail.com",
     "senha": "maria"
+  },
+  {
+    "cpf": "345.535.455-34",
+    "telefone": "(83) 96743-5654",
+    "endereco": "ertert",
+    "nome": "ger",
+    "email": "abc@abc",
+    "senha": "abc"
   }
 ]

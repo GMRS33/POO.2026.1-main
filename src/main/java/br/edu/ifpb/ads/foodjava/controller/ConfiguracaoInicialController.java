@@ -4,6 +4,7 @@ import br.edu.ifpb.ads.foodjava.model.Gerente;
 import br.edu.ifpb.ads.foodjava.model.Restaurante;
 import br.edu.ifpb.ads.foodjava.service.GerenteService;
 import br.edu.ifpb.ads.foodjava.service.RestauranteService;
+import br.edu.ifpb.ads.foodjava.util.MascaraUtil;
 import br.edu.ifpb.ads.foodjava.util.TrocarTela;
 import br.edu.ifpb.ads.foodjava.util.Validacao;
 import javafx.event.ActionEvent;
@@ -41,6 +42,14 @@ public class ConfiguracaoInicialController {
 
     private RestauranteService restauranteService = new RestauranteService();
     private GerenteService gerenteService = new GerenteService();
+
+    @FXML
+    public void initialize() {
+
+        MascaraUtil.aplicarMascaraCnpj(txtCnpj);
+        MascaraUtil.aplicarMascaraTelefone(txtTelefone);
+
+    }
 
     @FXML
     public void salvar(ActionEvent event) {
@@ -85,16 +94,16 @@ public class ConfiguracaoInicialController {
         }
 
         Restaurante restaurante = new Restaurante(
-                txtNomeFantasia.getText(),
-                txtCnpj.getText(),
-                txtEndereco.getText(),
-                txtTelefone.getText(),
-                txtCategoria.getText(),
-                txtEmail.getText());
+                txtNomeFantasia.getText().trim(),
+                txtCnpj.getText().trim(),
+                txtEndereco.getText().trim(),
+                txtTelefone.getText().trim(),
+                txtCategoria.getText().trim(),
+                txtEmail.getText().trim());
 
         Gerente gerente = new Gerente(
-                txtNomeGerente.getText(),
-                txtEmail.getText(),
+                txtNomeGerente.getText().trim(),
+                txtEmail.getText().trim(),
                 txtSenha.getText());
 
         restauranteService.configurarRestaurante(restaurante);

@@ -1,0 +1,183 @@
+.root {
+    -fx-font-family: "Segoe UI";
+    -fx-background-color: linear-gradient(to bottom,
+        #CFE9FF 0%,
+        #B8DBFF 40%,
+        #DDF2FF 100%);
+}
+
+/* Painéis estilo vidro */
+.painel-glass {
+    -fx-background-color: rgba(255,255,255,0.55);
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: rgba(255,255,255,0.85);
+    -fx-border-width: 1.5;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.20), 18, 0.25, 0, 5);
+}
+
+/* Labels */
+
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #0D47A1;
+}
+
+.titulo {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0066CC;
+}
+
+/* Botões */
+
+.button {
+
+    -fx-background-color: linear-gradient(to bottom,
+        #6EC6FF,
+        #1E88E5);
+
+    -fx-text-fill: white;
+
+    -fx-font-weight: bold;
+
+    -fx-font-size: 14px;
+
+    -fx-background-radius: 12;
+
+    -fx-border-radius: 12;
+
+    -fx-border-color: rgba(255,255,255,0.8);
+
+    -fx-cursor: hand;
+
+    -fx-effect: dropshadow(gaussian,
+        rgba(0,0,0,0.25),
+        8,
+        0.2,
+        0,
+        2);
+}
+
+.button:hover {
+
+    -fx-background-color: linear-gradient(to bottom,
+        #90D8FF,
+        #42A5F5);
+
+}
+
+.button:pressed {
+
+    -fx-background-color: linear-gradient(to bottom,
+        #1976D2,
+        #1565C0);
+
+}
+
+/* Campos */
+
+.text-field,
+.password-field,
+.combo-box,
+.text-area {
+
+    -fx-background-color: rgba(255,255,255,0.80);
+
+    -fx-background-radius: 10;
+
+    -fx-border-radius: 10;
+
+    -fx-border-color: rgba(255,255,255,0.9);
+
+    -fx-border-width: 1.2;
+
+    -fx-font-size: 14px;
+
+}
+
+.text-field:focused,
+.password-field:focused,
+.combo-box:focused,
+.text-area:focused {
+
+    -fx-border-color: #42A5F5;
+
+    -fx-effect: dropshadow(gaussian,
+        rgba(66,165,245,0.5),
+        10,
+        0.3,
+        0,
+        0);
+
+}
+
+/* Tabelas */
+
+.table-view {
+
+    -fx-background-color: rgba(255,255,255,0.65);
+
+    -fx-background-radius: 12;
+
+    -fx-border-radius: 12;
+
+}
+
+.table-view .column-header {
+
+    -fx-background-color: linear-gradient(to bottom,
+        #4FC3F7,
+        #1976D2);
+
+}
+
+.table-view .column-header-background .label {
+
+    -fx-text-fill: white;
+
+    -fx-font-weight: bold;
+
+}
+
+.table-row-cell:selected {
+
+    -fx-background-color: #81D4FA;
+
+}
+
+/* Botão verde */
+
+.botao-verde {
+
+    -fx-background-color: linear-gradient(to bottom,
+        #66BB6A,
+        #43A047);
+
+}
+
+.botao-verde:hover {
+
+    -fx-background-color: linear-gradient(to bottom,
+        #81C784,
+        #4CAF50);
+
+}
+
+/* Botão vermelho */
+
+.botao-vermelho {
+
+    -fx-background-color: linear-gradient(to bottom,
+        #EF5350,
+        #E53935);
+
+}
+
+.botao-vermelho:hover {
+
+    -fx-background-color: linear-gradient(to bottom,
+        #E57373,
+        #EF5350);
+
+}

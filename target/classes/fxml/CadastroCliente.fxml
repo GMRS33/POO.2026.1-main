@@ -3,43 +3,91 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="500.0" prefWidth="650.0"
-xmlns="http://javafx.com/javafx/21"
-xmlns:fx="http://javafx.com/fxml/1"
-fx:controller="br.edu.ifpb.ads.foodjava.controller.CadastroClienteController">
+<AnchorPane prefHeight="500.0"
+            prefWidth="650.0"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.edu.ifpb.ads.foodjava.controller.CadastroClienteController">
 
     <children>
 
-        <Label layoutX="220" layoutY="20"
+        <Label layoutX="205"
+               layoutY="25"
                text="Cadastro de Cliente"
                style="-fx-font-size:22px;-fx-font-weight:bold;"/>
 
-        <Label layoutX="80" layoutY="80" text="Nome"/>
-        <TextField fx:id="txtNome" layoutX="180" layoutY="75" prefWidth="300"/>
+        <Label layoutX="80"
+               layoutY="82"
+               text="Nome"/>
 
-        <Label layoutX="80" layoutY="120" text="CPF"/>
-        <TextField fx:id="txtCpf" layoutX="180" layoutY="115" prefWidth="300"/>
+        <TextField fx:id="txtNome"
+                   layoutX="180"
+                   layoutY="75"
+                   prefWidth="320"
+                   promptText="João da Silva"/>
 
-        <Label layoutX="80" layoutY="160" text="Telefone"/>
-        <TextField fx:id="txtTelefone" layoutX="180" layoutY="155" prefWidth="300"/>
+        <Label layoutX="80"
+               layoutY="122"
+               text="CPF"/>
 
-        <Label layoutX="80" layoutY="200" text="Endereço"/>
-        <TextField fx:id="txtEndereco" layoutX="180" layoutY="195" prefWidth="300"/>
+        <TextField fx:id="txtCpf"
+                   layoutX="180"
+                   layoutY="115"
+                   prefWidth="320"
+                   promptText="000.000.000-00"/>
 
-        <Label layoutX="80" layoutY="240" text="Email"/>
-        <TextField fx:id="txtEmail" layoutX="180" layoutY="235" prefWidth="300"/>
+        <Label layoutX="80"
+               layoutY="162"
+               text="Telefone"/>
 
-        <Label layoutX="80" layoutY="280" text="Senha"/>
-        <PasswordField fx:id="txtSenha" layoutX="180" layoutY="275" prefWidth="300"/>
+        <TextField fx:id="txtTelefone"
+                   layoutX="180"
+                   layoutY="155"
+                   prefWidth="320"
+                   promptText="(00) 00000-0000"/>
+
+        <Label layoutX="80"
+               layoutY="202"
+               text="Endereço"/>
+
+        <TextField fx:id="txtEndereco"
+                   layoutX="180"
+                   layoutY="195"
+                   prefWidth="320"
+                   promptText="Rua Exemplo, 123"/>
+
+        <Label layoutX="80"
+               layoutY="242"
+               text="E-mail"/>
+
+        <TextField fx:id="txtEmail"
+                   layoutX="180"
+                   layoutY="235"
+                   prefWidth="320"
+                   promptText="exemplo@email.com"/>
+
+        <Label layoutX="80"
+               layoutY="282"
+               text="Senha"/>
+
+        <PasswordField fx:id="txtSenha"
+                       layoutX="180"
+                       layoutY="275"
+                       prefWidth="320"
+                       promptText="Digite sua senha"/>
 
         <Button text="Cadastrar"
                 layoutX="180"
-                layoutY="360"
+                layoutY="365"
+                prefWidth="140"
+                prefHeight="35"
                 onAction="#cadastrar"/>
 
         <Button text="Voltar"
-                layoutX="300"
-                layoutY="360"
+                layoutX="360"
+                layoutY="365"
+                prefWidth="140"
+                prefHeight="35"
                 onAction="#voltar"/>
 
     </children>

@@ -6,37 +6,106 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="550.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifpb.ads.foodjava.controller.ConfiguracaoInicialController">
+<AnchorPane prefHeight="550.0"
+            prefWidth="750.0"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.edu.ifpb.ads.foodjava.controller.ConfiguracaoInicialController">
 
     <children>
 
-        <Label layoutX="187.0" layoutY="14.0" style="-fx-font-size:22px; -fx-font-weight:bold;" text="Configuração Inicial do Restaurante" />
+        <Label layoutX="175"
+               layoutY="20"
+               text="Configuração Inicial do Restaurante"
+               style="-fx-font-size:22px; -fx-font-weight:bold;"/>
 
-        <Label layoutX="147.0" layoutY="82.0" text="Nome Fantasia" />
-        <TextField fx:id="txtNomeFantasia" layoutX="297.0" layoutY="77.0" prefWidth="300" />
+        <Label layoutX="120"
+               layoutY="82"
+               text="Nome Fantasia"/>
 
-        <Label layoutX="147.0" layoutY="127.0" text="CNPJ" />
-        <TextField fx:id="txtCnpj" layoutX="297.0" layoutY="122.0" prefWidth="300" />
+        <TextField fx:id="txtNomeFantasia"
+                   layoutX="300"
+                   layoutY="75"
+                   prefWidth="320"
+                   promptText="Restaurante Exemplo"/>
 
-        <Label layoutX="147.0" layoutY="172.0" text="Endereço" />
-        <TextField fx:id="txtEndereco" layoutX="297.0" layoutY="167.0" prefWidth="300" />
+        <Label layoutX="120"
+               layoutY="127"
+               text="CNPJ"/>
 
-        <Label layoutX="147.0" layoutY="217.0" text="Telefone" />
-        <TextField fx:id="txtTelefone" layoutX="297.0" layoutY="212.0" prefWidth="300" />
+        <TextField fx:id="txtCnpj"
+                   layoutX="300"
+                   layoutY="120"
+                   prefWidth="320"
+                   promptText="00.000.000/0000-00"/>
 
-        <Label layoutX="147.0" layoutY="262.0" text="Categoria" />
-        <TextField fx:id="txtCategoria" layoutX="297.0" layoutY="257.0" prefWidth="300" />
+        <Label layoutX="120"
+               layoutY="172"
+               text="Endereço"/>
 
-        <Label layoutX="147.0" layoutY="307.0" text="Nome do Gerente" />
-        <TextField fx:id="txtNomeGerente" layoutX="297.0" layoutY="302.0" prefWidth="300" />
+        <TextField fx:id="txtEndereco"
+                   layoutX="300"
+                   layoutY="165"
+                   prefWidth="320"
+                   promptText="Rua Exemplo, 123"/>
 
-        <Label layoutX="147.0" layoutY="352.0" text="Email" />
-        <TextField fx:id="txtEmail" layoutX="297.0" layoutY="347.0" prefWidth="300" />
+        <Label layoutX="120"
+               layoutY="217"
+               text="Telefone"/>
 
-        <Label layoutX="147.0" layoutY="397.0" text="Senha" />
-        <PasswordField fx:id="txtSenha" layoutX="297.0" layoutY="392.0" prefWidth="300" />
+        <TextField fx:id="txtTelefone"
+                   layoutX="300"
+                   layoutY="210"
+                   prefWidth="320"
+                   promptText="(00) 00000-0000"/>
 
-        <Button fx:id="btnSalvar" layoutX="314.0" layoutY="462.0" onAction="#salvar" text="Salvar Configuração" />
+        <Label layoutX="120"
+               layoutY="262"
+               text="Categoria"/>
+
+        <TextField fx:id="txtCategoria"
+                   layoutX="300"
+                   layoutY="255"
+                   prefWidth="320"
+                   promptText="Pizzaria, Lanches, Japonesa..."/>
+
+        <Label layoutX="120"
+               layoutY="307"
+               text="Nome do Gerente"/>
+
+        <TextField fx:id="txtNomeGerente"
+                   layoutX="300"
+                   layoutY="300"
+                   prefWidth="320"
+                   promptText="João da Silva"/>
+
+        <Label layoutX="120"
+               layoutY="352"
+               text="E-mail"/>
+
+        <TextField fx:id="txtEmail"
+                   layoutX="300"
+                   layoutY="345"
+                   prefWidth="320"
+                   promptText="gerente@email.com"/>
+
+        <Label layoutX="120"
+               layoutY="397"
+               text="Senha"/>
+
+        <PasswordField fx:id="txtSenha"
+                       layoutX="300"
+                       layoutY="390"
+                       prefWidth="320"
+                       promptText="Digite uma senha"/>
+
+        <Button fx:id="btnSalvar"
+                layoutX="270"
+                layoutY="470"
+                prefWidth="200"
+                prefHeight="38"
+                text="Salvar Configuração"
+                onAction="#salvar"/>
 
     </children>
 
