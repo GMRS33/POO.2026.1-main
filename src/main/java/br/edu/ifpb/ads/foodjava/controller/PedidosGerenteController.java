@@ -12,6 +12,7 @@ import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
@@ -44,8 +45,23 @@ public class PedidosGerenteController {
 	@FXML
 	public void initialize() {
 
-		colId.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getId()));
+		colId.setCellFactory(column -> new TableCell<Pedido, String>() {
 
+		    @Override
+		    protected void updateItem(String item, boolean empty) {
+
+		        super.updateItem(item, empty);
+
+		        if (empty) {
+		            setText(null);
+		        } else {
+		            setText(String.format("%04d", getIndex() + 1));
+		        }
+
+		    }
+
+		});
+		
 		colCliente.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getCliente().getNome()));
 
 		colData.setCellValueFactory(cell -> new SimpleStringProperty(

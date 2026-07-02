@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="550" prefWidth="850" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifpb.ads.foodjava.controller.CardapioGerenteController">
+
+    <children>
+
+        <Label layoutX="318.0" layoutY="23.0" style="-fx-font-size:22px;-fx-font-weight:bold;" text="Cardápio do Gerente" />
+
+        <TableView fx:id="tableItens" layoutX="30" layoutY="70" prefHeight="360" prefWidth="790">
+
+            <columns>
+
+                <TableColumn fx:id="colNome" prefWidth="180" text="Nome" />
+
+                <TableColumn fx:id="colCategoria" prefWidth="160" text="Categoria" />
+
+                <TableColumn fx:id="colPreco" prefWidth="120" text="Preço" />
+
+                <TableColumn fx:id="colDisponivel" prefWidth="120" text="Disponível" />
+
+            </columns>
+
+        </TableView>
+
+        <Button layoutX="173.0" layoutY="460.0" onAction="#editar" text="Editar" />
+        		
+        <Button layoutX="260.0" layoutY="460.0" onAction="#excluir" text="Excluir" />
+
+        <Button layoutX="351.0" layoutY="460.0" onAction="#atualizar" text="Atualizar" />
+
+        <Button layoutX="443.0" layoutY="460.0" onAction="#voltar" text="Voltar" />
+
+    </children>
+
+</AnchorPane>

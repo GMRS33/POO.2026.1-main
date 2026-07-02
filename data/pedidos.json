@@ -1,20 +1,20 @@
 [
   {
-    "id": "4bc72200-0f85-4755-8a99-97ba4b5b5c66",
+    "id": "44dbfd94-6506-4924-913a-7f914d351f41",
     "cliente": {
-      "cpf": "53755529491",
-      "telefone": "83996848274",
-      "endereco": "Rua tal",
-      "nome": "Maria",
-      "email": "maria@gmail.com",
-      "senha": "maria"
+      "cpf": "000.000.000-00",
+      "telefone": "(00) 00000-0000",
+      "endereco": "Rua Joao",
+      "nome": "Michel",
+      "email": "abc@abc",
+      "senha": "abc"
     },
-    "dataHora": "2026-06-29T11:11:35.734628600",
+    "dataHora": "2026-07-01T16:18:01.345389700",
     "itens": [
       {
         "item": {
-          "nome": "feijao",
-          "descricao": "feijao",
+          "nome": "Feijão",
+          "descricao": "Feijão",
           "preco": 20.0,
           "categoria": "ENTRADA",
           "disponivel": true,
@@ -24,6 +24,114 @@
       }
     ],
     "valorTotal": 20.0,
-    "status": "CANCELADO"
+    "status": "EM_PREPARO"
+  },
+  {
+    "id": "7a3c96f3-e9a9-4937-9392-9a728943a072",
+    "cliente": {
+      "cpf": "000.000.000-00",
+      "telefone": "(00) 00000-0000",
+      "endereco": "Rua Joao",
+      "nome": "Michel",
+      "email": "abc@abc",
+      "senha": "abc"
+    },
+    "dataHora": "2026-07-01T23:55:37.090128400",
+    "itens": [
+      {
+        "item": {
+          "nome": "Feijão",
+          "descricao": "Feijão",
+          "preco": 20.0,
+          "categoria": "ENTRADA",
+          "disponivel": true,
+          "imagemPath": ""
+        },
+        "quantidade": 1
+      }
+    ],
+    "valorTotal": 20.0,
+    "status": "CONFIRMADO"
+  },
+  {
+    "id": "aecb9219-c2f2-41f6-a4e4-64c08865d6af",
+    "cliente": {
+      "cpf": "000.000.000-00",
+      "telefone": "(00) 00000-0000",
+      "endereco": "Rua Joao",
+      "nome": "Michel",
+      "email": "abc@abc",
+      "senha": "abc"
+    },
+    "dataHora": "2026-07-02T00:21:05.719970500",
+    "itens": [
+      {
+        "item": {
+          "nome": "Feijão",
+          "descricao": "Feijão",
+          "preco": 20.0,
+          "categoria": "ENTRADA",
+          "disponivel": true,
+          "imagemPath": ""
+        },
+        "quantidade": 1
+      }
+    ],
+    "valorTotal": 20.0,
+    "status": "RECEBIDO"
+  },
+  {
+    "id": "a6886ee8-6fd3-4375-817d-99dfa3f57205",
+    "cliente": {
+      "cpf": "000.000.000-00",
+      "telefone": "(00) 00000-0000",
+      "endereco": "Rua Joao",
+      "nome": "Michel",
+      "email": "abc@abc",
+      "senha": "abc"
+    },
+    "dataHora": "2026-07-02T00:21:38.498834700",
+    "itens": [
+      {
+        "item": {
+          "nome": "Feijão",
+          "descricao": "Feijão",
+          "preco": 20.0,
+          "categoria": "ENTRADA",
+          "disponivel": true,
+          "imagemPath": ""
+        },
+        "quantidade": 3
+      }
+    ],
+    "valorTotal": 60.0,
+    "status": "RECEBIDO"
+  },
+  {
+    "id": "b360e20d-22a2-4daa-9448-e4a860c0dbc0",
+    "cliente": {
+      "cpf": "000.000.000-00",
+      "telefone": "(00) 00000-0000",
+      "endereco": "Rua Joao",
+      "nome": "Michel",
+      "email": "abc@abc",
+      "senha": "abc"
+    },
+    "dataHora": "2026-07-02T01:16:12.822860500",
+    "itens": [
+      {
+        "item": {
+          "nome": "Feijão",
+          "descricao": "Feijão",
+          "preco": 20.0,
+          "categoria": "ENTRADA",
+          "disponivel": true,
+          "imagemPath": ""
+        },
+        "quantidade": 6
+      }
+    ],
+    "valorTotal": 120.0,
+    "status": "SAIU_PARA_ENTREGA"
   }
 ]

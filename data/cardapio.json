@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "nome": "Feijão",
+    "descricao": "Feijão",
+    "preco": 20.0,
+    "categoria": "ENTRADA",
+    "disponivel": true,
+    "imagemPath": ""
+  },
+  {
+    "nome": "sfdgsdf",
+    "descricao": "sdfsdf",
+    "preco": 12.0,
+    "categoria": "BEBIDAS",
+    "disponivel": true,
+    "imagemPath": ""
+  },
+  {
+    "nome": "werasdf",
+    "descricao": "wer234fr",
+    "preco": 11.0,
+    "categoria": "SOBREMESA",
+    "disponivel": true,
+    "imagemPath": ""
+  }
+]

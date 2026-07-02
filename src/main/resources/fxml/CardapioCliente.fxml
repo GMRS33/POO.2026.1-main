@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="600"
@@ -11,9 +15,9 @@
 
     <children>
 
-        <Label layoutX="300"
-               layoutY="20"
-               text="Cardápio"
+        <Label layoutX="323"
+               layoutY="22"
+               text="Cardápio do Cliente"
                style="-fx-font-size:22px;-fx-font-weight:bold;"/>
 
         <TableView fx:id="tableItens"
@@ -25,39 +29,48 @@
             <columns>
 
                 <TableColumn fx:id="colNome"
-                             text="Nome"
-                             prefWidth="170"/>
+                             prefWidth="170"
+                             text="Nome"/>
 
                 <TableColumn fx:id="colDescricao"
-                             text="Descrição"
-                             prefWidth="250"/>
+                             prefWidth="250"
+                             text="Descrição"/>
 
                 <TableColumn fx:id="colCategoria"
-                             text="Categoria"
-                             prefWidth="140"/>
+                             prefWidth="140"
+                             text="Categoria"/>
 
                 <TableColumn fx:id="colPreco"
-                             text="Preço"
-                             prefWidth="100"/>
+                             prefWidth="100"
+                             text="Preço"/>
 
                 <TableColumn fx:id="colDisponivel"
-                             text="Disponível"
-                             prefWidth="100"/>
+                             prefWidth="100"
+                             text="Disponível"/>
 
             </columns>
 
         </TableView>
 
-        <Button text="Adicionar ao Carrinho"
-                layoutX="180"
-                layoutY="510"
-                prefWidth="180"
+        <Label layoutX="75"
+               layoutY="501"
+               text="Quantidade:"/>
+
+        <Spinner fx:id="spinnerQuantidade"
+                 layoutX="160"
+                 layoutY="496"
+                 prefWidth="80"/>
+
+        <Button layoutX="285"
+                layoutY="496"
+                prefWidth="220"
+                text="Adicionar ao Carrinho"
                 onAction="#adicionarCarrinho"/>
 
-        <Button text="Voltar"
-                layoutX="450"
-                layoutY="510"
+        <Button layoutX="535"
+                layoutY="496"
                 prefWidth="120"
+                text="Voltar"
                 onAction="#voltar"/>
 
     </children>

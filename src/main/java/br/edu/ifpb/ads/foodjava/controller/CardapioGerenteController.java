@@ -13,7 +13,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-public class CardapioController {
+public class CardapioGerenteController {
 
     @FXML
     private TableView<ItemCardapio> tableItens;
@@ -28,7 +28,7 @@ public class CardapioController {
     private TableColumn<ItemCardapio, Double> colPreco;
 
     @FXML
-    private TableColumn<ItemCardapio, Boolean> colDisponivel;
+    private TableColumn<ItemCardapio, String> colDisponivel;
 
     @FXML
     private Button btnVoltar;
@@ -47,8 +47,11 @@ public class CardapioController {
         colPreco.setCellValueFactory(
                 new PropertyValueFactory<>("preco"));
 
-        colDisponivel.setCellValueFactory(
-                new PropertyValueFactory<>("disponivel"));
+        colDisponivel.setCellValueFactory(cell ->
+        new javafx.beans.property.SimpleStringProperty(
+                cell.getValue().isDisponivel()
+                        ? "Disponível"
+                        : "Indisponível"));
 
         carregarTabela();
 

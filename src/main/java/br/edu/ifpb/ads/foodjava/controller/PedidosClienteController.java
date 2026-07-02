@@ -10,6 +10,7 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
@@ -36,8 +37,23 @@ public class PedidosClienteController {
 	@FXML
 	public void initialize() {
 
-		colId.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getId()));
+		colId.setCellFactory(column -> new TableCell<Pedido, String>() {
 
+		    @Override
+		    protected void updateItem(String item, boolean empty) {
+
+		        super.updateItem(item, empty);
+
+		        if (empty) {
+		            setText(null);
+		        } else {
+		            setText(String.format("%04d", getIndex() + 1));
+		        }
+
+		    }
+
+		});
+		
 		colData.setCellValueFactory(cell -> new SimpleStringProperty(
 				cell.getValue().getDataHora().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"))));
 

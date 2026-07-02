@@ -71,10 +71,11 @@
                text="Senha"/>
 
         <PasswordField fx:id="txtSenha"
-                       layoutX="180"
-                       layoutY="275"
-                       prefWidth="320"
-                       promptText="Digite sua senha"/>
+               layoutX="180"
+               layoutY="275"
+               prefWidth="300"
+               promptText="Digite sua senha"
+               onAction="#cadastrar"/>
 
         <Button text="Cadastrar"
                 layoutX="180"

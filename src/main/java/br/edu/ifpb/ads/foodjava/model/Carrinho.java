@@ -15,20 +15,22 @@ public class Carrinho {
         return itens;
     }
 
-    public void adicionarItem(ItemCardapio item) {
+    public void adicionarItem(ItemCardapio item, int quantidade) {
 
         for (ItemPedido itemPedido : itens) {
 
             if (itemPedido.getItem().getNome().equalsIgnoreCase(item.getNome())) {
 
-                itemPedido.setQuantidade(itemPedido.getQuantidade() + 1);
+                itemPedido.setQuantidade(
+                        itemPedido.getQuantidade() + quantidade);
+
                 return;
 
             }
 
         }
 
-        itens.add(new ItemPedido(item, 1));
+        itens.add(new ItemPedido(item, quantidade));
 
     }
 

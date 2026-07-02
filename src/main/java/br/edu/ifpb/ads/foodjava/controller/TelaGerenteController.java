@@ -37,7 +37,7 @@ public class TelaGerenteController {
 
         TrocarTela.abrir(
                 (Stage) btnCardapio.getScene().getWindow(),
-                "Cardapio.fxml");
+        		"CardapioGerente.fxml");
 
     }
 
